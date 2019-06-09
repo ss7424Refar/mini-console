@@ -1,23 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <Head></Head>
+
+    <b-container-fluid>
+      <b-row>
+        <b-col md="1">
+          <side-bar></side-bar>
+        </b-col>
+        <b-col md="9">
+          <router-view/>
+        </b-col>
+        <b-col md="2">
+          <right-side></right-side>
+        </b-col>
+      </b-row>
+    </b-container-fluid>
+
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  import Head from '@/components/common/Head'
+  import SideBar from '@/components/common/SideBar'
+  import RightSide from '@/components/common/RightSide'
+
+  export default {
+    name: 'App',
+    components: {
+      Head,
+      SideBar,
+      RightSide
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

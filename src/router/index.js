@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import BasicInfo from '@/components/BasicInfo'
+import Jumbotron from '@/components/Jumbotron'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'BasicInfo',
+      component: BasicInfo
+    },
+    {
+      path: '/Jumbotron',
+      name: 'Jumbotron',
+      component: Jumbotron
     }
   ]
 })
